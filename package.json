@@ -4,8 +4,9 @@
   "scripts": {
     "start": "vite --port 3000 --open",
     "dev": "vite --port 3000 --open",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "vite build && sentry-cli sourcemaps inject --org steven-eubank --project javascript-react ./dist && sentry-cli sourcemaps upload --org steven-eubank --project javascript-react ./dist",
+    "serve": "vite preview",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org steven-eubank --project javascript-react ./dist && sentry-cli sourcemaps upload --org steven-eubank --project javascript-react ./dist"
   },
   "dependencies": {
     "@sentry/react": "^7.58.1",
