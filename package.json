@@ -9,6 +9,7 @@
     "sentry:sourcemaps": "sentry-cli sourcemaps inject --org steven-eubank --project javascript-react ./dist && sentry-cli sourcemaps upload --org steven-eubank --project javascript-react ./dist"
   },
   "dependencies": {
+    "@sentry/cli": "^2.19.4",
     "@sentry/react": "^7.58.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
